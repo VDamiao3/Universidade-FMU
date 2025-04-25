@@ -1,0 +1,97 @@
+1.1 CÓDIGO ESTALÇAO DE TREM
+
+include <LiquidCrystal.h> //Adicionando a biblioteca que controla o lcd
+bool running = true;
+//Definindo os pinos do LCD
+LiquidCrystal lcd(13,12,11,5,4,3,2);
+// Definindo os pinos dos LEDs
+int leds[] = 10, 9, 8, 7, 6; // Vetor com 5 LEDs
+char* nomesEstacao[] =
+"Vila Sonia", "SP-Morumbi", "Butanta", "Pinheiros", "Faria Lima", "FradiqueCoutinho", "Oscar Freire", "Consolacao", "H. Mackenzie", "Anhagabau", "Luz"
+; // Vetor com o nome das Estações
+void setup()
+// Inicializa o display LCD
+lcd.begin(16, 2);
+lcd.print("Linha Amarela");
+lcd.setCursor(0, 2);
+lcd.print("Sentido Luz");
+delay(3000);
+lcd.clear();
+lcd.setCursor(0, 0);
+lcd.print("Estacao");
+// Define os pinos dos LEDs como saída
+for (int i = 0; i < 5; i++)
+pinMode(leds[i], OUTPUT);
+delay(2000); // Pausa de 2 segundos para exibir a mensagem inicial
+void loop()
+2
+for (int i = 0; i < 11; i++)
+if(i == 5 || i == 10)
+for(int j=0; j<5; j++)
+digitalWrite(leds[j], LOW);
+// Mapeamento dos LEDS
+if (i == 0 || i == 5 || i == 10)
+digitalWrite(leds[0], HIGH);
+delay(500);
+digitalWrite(leds[0], LOW);
+delay(500);
+digitalWrite(leds[0], HIGH);
+delay(500);
+digitalWrite(leds[0], LOW);
+delay(500);
+digitalWrite(leds[0], HIGH); // LED 1 para estações 1, 6, 11
+else if (i == 1 || i == 6)
+digitalWrite(leds[1], HIGH);
+delay(500);
+digitalWrite(leds[1], LOW);
+delay(500);
+digitalWrite(leds[1], HIGH);
+delay(500);
+digitalWrite(leds[1], LOW);
+delay(500);
+digitalWrite(leds[1], HIGH); // LED 2 para estações 2, 7
+else if (i == 2 || i == 7)
+digitalWrite(leds[2], HIGH);
+3
+delay(500);
+digitalWrite(leds[2], LOW);
+delay(500);
+digitalWrite(leds[2], HIGH);
+delay(500);
+digitalWrite(leds[2], LOW);
+delay(500);
+digitalWrite(leds[2], HIGH); // LED 3 para estações 3, 8
+else if (i == 3 || i == 8)
+digitalWrite(leds[3], HIGH);
+delay(500);
+digitalWrite(leds[3], LOW);
+delay(500);
+digitalWrite(leds[3], HIGH);
+delay(500);
+digitalWrite(leds[3], LOW);
+delay(500);
+digitalWrite(leds[3], HIGH); // LED 4 para estações 4, 9
+else if (i == 4 || i == 9)
+digitalWrite(leds[4], HIGH);
+delay(500);
+digitalWrite(leds[4], LOW);
+delay(500);
+digitalWrite(leds[4], HIGH);
+delay(500);
+digitalWrite(leds[4], LOW);
+delay(500);
+digitalWrite(leds[4], HIGH); // LED 5 para estações 5, 10
+// Exibe o nome da estação correspondente no display LCD
+lcd.setCursor(0, 2);
+lcd.print(nomesEstacao[i]);
+delay(2000); // Tempo de permanência na estação
+4
+lcd.setCursor(0, 1);
+lcd.clear(); // Limpa o display antes de exibir a próxima estação
+lcd.print("Estacao");
+if(i==10)
+for(i=0; i<11; i++)
+digitalWrite(leds[i], LOW);
+lcd.noDisplay();
+exit(0);
+delay(50);

@@ -1,0 +1,19 @@
+<script>
+ const  
+ // contante, mesmo que mude o valor continua constante terá erro
+
+ // document.write("<br>"+pi)
+ //if for while switch
+ 
+ let aluno=prompt("digite sua idade")
+ // transforme em script
+
+ let idade=prompt("digite suaidade")
+
+ // idade="22" --> idade=22
+ idade=parseInt(idade)
+
+ alert("o nome do aluno é "+ aluno + "<br>" + "sua idade é" + idade + "anos" )
+
+ 
+</script>

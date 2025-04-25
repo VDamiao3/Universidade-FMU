@@ -1,0 +1,63 @@
+<head><title> calculadora </title>
+
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- favIcon generator -->
+</head>
+
+
+<body>
+<h1 id="unico" class="titulo"> Calculadora</h1>
+<br>
+<h2>valores digitados</h2>
+
+<div>
+<p>
+pipipipipopopo
+</P>
+</div>
+
+</body>
+
+
+
+<script>
+
+ //deixar script no final por organização
+
+ 
+ let n1=prompt("digite o valor 1")
+ // transforme em script
+n1=parseFloat(n1)
+ let n2=prompt("digite o valor 2")
+ // transforme em script
+ n2=parseFloat(n2)
+
+ document.writeln("soma="+(n1+n2))
+
+ document.writeln("sub="+(n1-n2))
+ 
+ document.writeln("multi="+(n1*n2))
+ 
+ //document.writeln("div="+(n1/n2))
+
+if(n2!=0){
+ document.write("<br> Divisao = " + (n1/n2))
+ 
+}else{
+document.write("Impossivel dividir por zero")
+}
+
+ // DOM - white screen
+ // D - documnet
+ // O - object
+ // M - model
+ // representa uma arvore
+
+
+// alteramos o alinhamento e cor do id=unico
+   document.getElementById("unico").style.color="blue"
+   document.getElementById("unico").style.textAlign="center"
+   
+   // alterar elemenetos pelo nome da classe
+   document.getElementByClassName("titulo")[0]style.colo="blue"
+</script>

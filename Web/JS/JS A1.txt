@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="shortcut icon" href="/icon/Wineass-Ios7-Redesign-Calculator.512.png" type="image/x-icon">
+</head>
+<body>
+    <script>
+
+let n1 = prompt("digite o Primeiro valor: ")
+let n2 = prompt("digite o Segundo valor")
+n1=parseFloat(n1)
+n2=parseFloat(n2)
+
+soma=n1+n2
+div=n1/n2
+multi=n1*n2
+sub=n1-n2
+document.write("Soma: "+soma)
+document.write("<br>Subtração: "+sub)
+document.write("<br>Multiplicação: "+multi)
+if(n2!=0 ){
+    document.write("<br> Divisão: "+div)
+}else{
+
+    alert("impossivel dividir!!")
+
+}
+
+
+    </script>
+</body>
+</html>

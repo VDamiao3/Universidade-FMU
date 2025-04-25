@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+   int buscalinear(int *v, int n, int x, int l){
+       int i;
+       for (i=0;i<n;i++){
+           if(v[i]==x){
+               return i;
+           }
+       }
+       
+       return -1;
+   }
+   
+   int blr(int*v, int n, int x, int l){
+    if(l == n){
+        return -1;
+    }
+    else if(v[l] == x){
+        return 1;
+    }
+    else{
+        blr(v, n, x ,l +1);
+    }
+}
+
+int bb(int*v, int n, int x){
+    int r=n-1;
+    int l=0;
+    int m=(l+r)/2;
+    
+    while(l<=r && v[m]!=x){
+        if(x <= v[m]){
+            r=m-1;
+        }
+        else if(x>v[m]){
+        l=m+1;
+        }
+        m=(l+r)/2;   
+    }
+    
+    if(v[m]==x) return m;
+    else return -1;
+}
+
+int bbir(int*v, int l, int r, int x){
+    int m=(l+r)/2;
+    if(l>r) return -1;
+    if(v[m]==x) return m;
+    if(x<v[m]) return bbir(v,l,m-1,x);
+    else return bbir(v,m+1, r, x);
+}
+
+int main(){
+    int numero[10] = {1,2,3,4,5,6,7,8,9,10};
+    int x;
+    printf("digite o x: ");
+    scanf("%d", &x);
+    printf("%d", bbir(numero, 0, 9, x));
+    
+    return 0;
+    
+}

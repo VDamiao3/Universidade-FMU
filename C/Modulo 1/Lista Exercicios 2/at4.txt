@@ -1,0 +1,105 @@
+#include<stdio.h>
+#include<iostream>
+
+int main(){
+
+    int decisao1;
+    int decisao2;
+    float morangos;
+    float macas;
+    float totalMorangos;
+    float totalMacas;
+    float totprec;
+    float kg;
+
+    //mor?
+
+
+     printf("Voce deseja comprar de morangos? 0 para sim 1 para nao \n");
+    scanf("%d",&decisao1);
+
+  if(decisao1==0){
+
+   printf("Quantos Kg voce deseja comprar de morangos: \n");
+     printf("\n OBS = Morangos: 2,50R$ por kilo até 5Kg; \n passara a ser 2,20R$ por kilo acima de 5Kg \n");
+     scanf("%f",&morangos);
+
+
+ }else{
+  
+ }
+ 
+    //maç?
+
+
+    printf("Voce deseja comprar de maca? 0 para sim 1 para nao \n");
+ scanf("%d",&decisao2);
+ 
+  if(decisao2==0){
+           printf("Quantos Kg voce deseja comprar de macas:");
+      printf("\n OBS = Macas: 1,80R$ por kilo até 5Kg; \n passara a ser 1,50R$ por kilo acima de 5Kg \n");
+      scanf("%f",&macas);
+ 
+  }else{
+
+     
+  }
+
+
+  //peso
+  //mor
+
+  if(morangos<=5){
+ totalMorangos=(2.50)*morangos;
+ printf("O preco de morangos e: %.2f\n", totalMorangos);
+ } 
+ else if(morangos>5){
+     //desconto 30
+ totalMorangos=(2.20)*morangos;
+ printf("O preco de morangos e: %.2f\n", totalMorangos);
+ } 
+ 
+ //peso
+ //maç
+ 
+ if(macas<=5){
+ totalMacas=(1.80)*macas;
+ printf("O preco da maca e: %.2f\n", totalMacas);
+ } 
+ else if(macas>5){
+     //desconto de 30
+totalMacas=(1.50)*macas;
+ printf("O preco da maca e: %.2f\n", totalMacas);
+ }
+ 
+ //total preço
+ //v1 e v2 pra facilitar a escrita
+ 
+ float v1;
+ float v2;
+ v1 = totalMacas;
+ v2 = totalMorangos;
+ totprec = v1 + v2;
+ 
+ float v3;
+ float v4;
+
+ v3 = macas;
+ v4 = morangos;
+ kg = v3 + v4;
+
+
+
+ //Total=totalMacas+totalMorangos;
+//verificando se ira receber desconto
+
+
+if(totprec>25 || kg>8){
+    printf("\n Parabéns voce ganhou desconto \n");
+    totprec=0.9*(totprec);
+}
+
+ printf(" fernando gastará um total de %.2f em frutas", totprec);
+ 
+ return 0;
+}

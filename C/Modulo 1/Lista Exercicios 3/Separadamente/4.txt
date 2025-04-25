@@ -1,0 +1,30 @@
+#include <stdio.h>
+int casos;
+float n1,n2,n3,SomaPeso,media,result;
+float peso1,peso2,peso3;
+
+int main()
+{
+    printf("Digite valor casos/vezes \n");
+    scanf("%d",&casos);
+    for(int i=0;i<casos;i++)
+    {
+         printf("Digite numero 1 \n");
+         scanf("%f",&n1);
+         peso1=2;
+         printf("Digite numero 2 \n"); 
+         scanf("%f",&n2);
+         peso2=3;
+         printf("Digite numero 3 \n");
+         scanf("%f",&n3);
+         peso3=5;
+         
+          media=n1+n2+n3;
+          SomaPeso=peso1+peso2+peso3;
+          result=media/SomaPeso;
+          
+          printf("A media Ponderada %.1f \n",result);
+    }
+    
+    return 0;
+}

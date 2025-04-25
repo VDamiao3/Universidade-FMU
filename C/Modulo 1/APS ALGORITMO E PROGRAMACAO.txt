@@ -1,0 +1,206 @@
+1-)
+#include<stdio.h>
+
+int idade, anos, meses, dias, resultadoanos, resultadomeses, resultadodias;
+
+int main() {
+
+    // Comando de entrada
+    printf("Insira a sua idade em dias, para sabermos ela em anos, meses e dias:\n");
+    scanf("%d", &idade);
+
+    // Fórmula
+    resultadoanos = idade / 365;
+    resultadomeses = (idade % 365) / 30;
+    resultadodias = (idade % 365) % 30;
+
+    // Comando de saída
+    printf("A sua idade fica %d ano(s), %d mes(es) e %d dia(s)", resultadoanos, resultadomeses, resultadodias);
+
+    return 0;
+}
+ 
+
+2-)
+#include <stdio.h>
+#include <math.h>
+
+float a, b, c, x1, x2, delta;
+
+int main() {
+
+    // Comando de entrada
+    printf("Insira o valor de A:\n");
+    scanf("%f", &a);
+    printf("Insira o valor de B:\n");
+    scanf("%f", &b);
+    printf("Insira o valor de C:\n");
+    scanf("%f", &c);
+
+    // Fórmula
+    delta = (b * b) - (4 * a * c);
+
+    if (delta > 0) {
+        // Se delta > 0, existem duas raízes reais.
+        x1 = ((-b) + sqrt(delta)) / (2 * a);
+        x2 = ((-b) - sqrt(delta)) / (2 * a);
+        printf("O valor de delta e: %.1f\n", delta);
+        printf("As raizes reais sao: x1=%.2f x2=%.2f", x1, x2);
+    } else if (delta < 0) {
+        // Se delta < 0, não existe raiz real.
+        printf("Nao existe raiz real, logo x1 e x2 sao iguais a 0");
+    } else if (delta == 0) {
+        // Se delta = 0, existe apenas uma raiz real.
+        x1 = x2 = ((-b) + sqrt(delta)) / (2 * a);
+        printf("Existe apenas uma raiz real, então, x1 = x2, logo o resultado e: %.2f", x2);
+    } else {
+        // Comando de saída
+        printf("Nao existe comando de saida");
+    }
+
+    return 0;
+}
+
+ 
+
+3-)
+#include<stdio.h>  
+
+float salario, reajuste, novo; 
+
+int main(){ 
+    // Comando de entrada 
+    printf("Insira o seu salario abaixo:\n");  
+    scanf("%f", &salario);  
+    
+    // Comando de saída 
+    if(salario >= 0 && salario <= 400){ 
+        reajuste = salario * 1.15; 
+        novo = reajuste - salario; 
+        printf("Novo salario: %.2f\n", reajuste); 
+        printf("Porcentagem de aumento: 15%%\n"); 
+        printf("Reajuste: %.2f\n", novo); 
+    } 
+    else if(salario >= 401 && salario <= 800){ 
+        reajuste = salario * 1.12; 
+        novo = reajuste - salario; 
+        printf("Novo salario: %.2f\n", reajuste); 
+        printf("Porcentagem de aumento: 12%%\n"); 
+        printf("Reajuste: %.2f\n", novo); 
+    } 
+    else if(salario >= 801 && salario <= 1200){ 
+        reajuste = salario * 1.10; 
+        novo = reajuste - salario; 
+        printf("Novo salario: %.2f\n", reajuste); 
+        printf("Porcentagem de aumento: 10%%\n"); 
+        printf("Reajuste: %.2f\n", novo); 
+    } 
+    else if(salario >= 1201 && salario <= 2000){ 
+        reajuste = salario * 1.07; 
+        novo = reajuste - salario; 
+        printf("Novo salario: %.2f\n", reajuste); 
+        printf("Porcentagem de aumento: 7%%\n"); 
+        printf("Reajuste: %.2f\n", novo); 
+    } 
+    else if(salario >= 2001){ 
+        reajuste = salario * 1.04; 
+        novo = reajuste - salario; 
+        printf("Novo salario: %.2f\n", reajuste); 
+        printf("Porcentagem de aumento: 4%%\n"); 
+        printf("Reajuste: %.2f\n", novo); 
+    } 
+    else{ 
+        printf("Valor de entrada invalido\n"); 
+    } 
+  
+    return 0; 
+}
+ 
+
+4-)
+#include<stdio.h>  
+
+int n1, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10;
+
+int main(){  
+    // Comando de entrada  
+    printf("Insira um numero para sabermos a sua tabuada de 1-10. Ele deve ser natural e estar no intervalo (2 < N1 < 1000): \n");  
+    scanf("%d", &n1);  
+
+    // Comando de saída 
+    if (2 <= n1 && n1 <= 1000){         
+        t1 = n1 * 1;          
+        t2 = n1 * 2;          
+        t3 = n1 * 3;          
+        t4 = n1 * 4;          
+        t5 = n1 * 5;          
+        t6 = n1 * 6;          
+        t7 = n1 * 7;          
+        t8 = n1 * 8;          
+        t9 = n1 * 9;          
+        t10 = n1 * 10;  
+
+        printf("A tabuada do numero %d e:\n%d, %d, %d, %d, %d, %d, %d, %d, %d, %d.\n", n1, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10); 
+    }  
+    else{ 
+        printf("Insira um numero natural que esteja no intervalo (2 < N1 < 1000).\n"); 
+    } 
+  
+    return 0; 
+}
+ 
+
+5-)
+#include <stdio.h>
+#include <stdbool.h>
+
+int main()
+{
+    bool condicao[6];
+    float n[6];
+    float soma = 0, result = 0;
+    int divisao = 0;
+    int i = 0, j = 0;
+    int contador = 1;
+
+    while (i < 6)
+    {
+        printf("Insira o numero %d de 6:\n", contador);
+        scanf("%f", &n[i]);
+        contador++;
+
+        if (n[i] < 0)
+        {
+            printf("O numero %.1f e negativo\n", n[i]);
+            condicao[i] = false;
+        }
+        else if (n[i] == 0)
+        {
+            printf("O numero %.1f não sera computado\n", n[i]);
+            condicao[i] = false;
+        }
+        else
+        {
+            printf("O numero %.1f e positivo\n", n[i]);
+            condicao[i] = true;
+            soma += n[i];
+            divisao++;
+        }
+
+        i++;
+    }
+
+    if (divisao > 0)
+    {
+        result = soma / divisao;
+        printf("A media dos numeros verificados como positivos e: %.1f\n", result);
+    }
+    else
+    {
+        printf("Nao foram fornecidos numeros positivos.\n");
+    }
+
+    return 0;
+}
+
+ 

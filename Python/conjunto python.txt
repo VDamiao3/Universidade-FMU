@@ -1,0 +1,123 @@
+#Conjunto ==> set representado por {}
+#nao confundir com dicionario {cahve:valor}
+cj={1,2,3}
+print (type(cj))
+
+cj=set (('Amarela','Azul'))
+
+#Um conjunto é colecao nao ordenada,
+#imutavel (conseguimos inserir e excluir itens
+#         so nao consigo alterar o que ja esta no cj)
+#          e nao e indexada
+
+#print (cj{0}) ===> Gera erro
+#cj{0} ==> gera erro
+
+
+
+
+
+frutasVermelhas=('morango', 'acerola','melancia')
+frutasAmarelas=('manga','pessego','banana','acerola')
+
+#uniao de conjuntos
+
+frutas=frutasVermelhas | frutasAmarelas
+print (frutas)
+
+#intersesecção de conjuntos
+#elementos iguais
+#interset ou &
+frutas=frutasVermelhas & frutasAmarelas
+frutas=frutasVermelhas.union(frutasAmarelas)
+print (frutas)
+#tamanho total de conjuntos
+print(f"total de elementos:{len(frutas)}")
+
+
+
+
+
+
+#prompt: criar um conjunto de cores
+cores = {'azul','vermelho','amarelo'}
+cores.add('rosa')
+print (cores)
+cores.remove('amarelo')
+print(cores)
+
+
+#imprimindo o conjunto de cores
+print("conjunto de cores:", cores)
+
+#adicionando uma nova fruta a lista
+frutas.append("abacaxi")
+
+#imprimindo a lista de frutas atualizada
+print("lista de frutas atualizada", frutas)
+
+#removendo uma cor do conjunto
+cores.remove('verde')
+
+#imprimindo o conjunto de cores atualizado
+print("conjunto de cores atualizado",cores)
+
+#criando um array unidimentsionala partid da biblioteca numpy
+import numpy as Nome
+#nome que quiser pois como vai utilizar sempre
+# seria um atalho para uso
+
+list{1,2,3,4,5} #nao e um vetor
+vet=Nome.array(lista)
+
+#array nao tem virgula
+[1 2 3 4 5]
+#lista tem virgula
+[1,2,3,4,5]
+
+#<class 'numpy.ndarray'>
+#print(type(vet))
+
+
+type(vet)
+print(vet)
+
+
+#criando um array bidimensional a
+#partir da biblioteca numpy (matriz)
+import numpy as np
+matriz=np.array([[1,2,3],[4,5,6],[7,8,9]])
+print(matriz)
+#matrix 3X3
+
+
+import numpy as np
+vetDias = np.Array (['dom','seg','ter','qua','qui','sex','sab'])
+
+#acessando elemtnso de um array
+print(vetDias[0])
+print(vetDias[4])
+
+
+tupla=(1,2,3)
+vetCor=np.array(tupla)
+print(type(vetCor))
+
+
+#numpy é usado para algumas funcoes de calculo
+import numpy as np
+vet= np.array(2,4,16,32,64,128)
+print(f"maior numero do vetor: {max(vet)}")
+print(f"minimo numero do vetor: {min(vet)}")
+#print(f"maior numero do vetor: { average(vet)}")
+print(f"soma numero do vetor: {sum(vet)}")
+print(f"tamanho numero do vetor: {len(vet)}")
+print(f"mediana do vetor: {np.median(vet)}")
+print(f"raiz quadrada vetor: {np.sqrt(vet)}")
+
+#calcular media
+print(f"media vetor: {sum(vet)/len(vet)}")
+print(f"mediana do vetor: {np.mean(vet)}")
+
+
+

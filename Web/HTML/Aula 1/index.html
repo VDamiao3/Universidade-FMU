@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2</title>
+</head>
+<body>
+    <ul>
+        <li>Hey baby!</li>
+        <li>Hey baby!</li>
+        <li>Hey baby!</li>
+        <li>Hey baby!</li>
+        <li>Hey baby!</li>
+    </ul>
+
+    <table border="6">
+        <tr>
+            <th>Coluna 1</th> <!--th: table header-->
+            <th>Coluna 2</th>
+        </tr>
+
+        <tr>
+            <td>Texto 1</td>
+            <td>Texto 2</td>
+        </tr>
+        <tr>
+            <td>Texto 3</td>  
+            <td>Texto 4</td>  <!-- use crtl+; para fazer cometários -->
+        </tr>
+    </table>
+
+     <!-- âncora -->
+    <a href="https://www.youtube.com/" target="_blank">youtube</a>
+    <a href='https://www.w3schools.com/' target="_blank">Clique aqui</a>
+
+    <br>
+    <a href="página1.html">Página 1</a>  <!--Target: serve para abrir novas janelas, sem ele, a página só muda-->
+    <br>
+    <a href="https://caniuse.com/">Can I use</a>
+
+    <br><br><br>
+    <!-- formulário -->
+        
+    <!-- atributos: action -->
+    <form action="#" method="post">
+
+        <label for="nome">Nome:</label> <input type="text" maxlength="50" size="40" id="nome" name="nome" class="" required>
+    </form> <!--action: leva a informação para o banco de dados -->
+    <br>
+
+    <label for="filhos">N° filhos:</label> 
+    <input type="number" name="filhos" id="filhos" class="" min="0" max="10" value="0" required> <!--value: valor de entrada, ou seja, -->
+    
+    <br>
+    <br>
+
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha" id="senha" minlength="5" maxlength="20" size="10" required> <!--required: é um requisito obrigatório-->
+
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" maxlength="80" size='50' autocomplete="on" required>
+
+    <br><br>
+
+    <input type="submit" value="Entrar" title="envie informações para o banco de dados"> <!--submit: manda ver (analisa se os dados serão verídicos)-->
+</body>
+</html>

@@ -1,0 +1,168 @@
+⦁ Desenvolva uma classe chamada “Trapézio” que possua um atributo para armazenar o raio e
+métodos para calcular a área e o perímetro do trapézio.
+import java.util.Scanner;
+public class Trapezio {
+ private float baseMenor, baseMaior, altura;
+ public Trapezio(float baseMenor, float baseMaior, float altura) {
+ this.baseMenor = baseMenor;
+ this.baseMaior = baseMaior;
+ this.altura = altura;
+ }
+ public float calcularArea() {
+ return ((baseMaior + baseMenor) * altura) / 2;
+ }
+ public float calcularPerimetro() {
+ float lado1 = (float) Math.sqrt(Math.pow((baseMaior - baseMenor) / 2, 2) + Math.pow(altura,
+2));
+ float perimetro = baseMenor + baseMaior + 2 * lado1;
+ return perimetro;
+ }
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+ System.out.println("base menor do trapezio:");
+ float baseMenor = scanner.nextFloat();
+ System.out.println("base maior do trapezio:");
+ float baseMaior = scanner.nextFloat();
+ System.out.println("altura do trapezio:");
+ float altura = scanner.nextFloat();
+ Trapezio trap = new Trapezio(baseMenor, baseMaior, altura);
+ System.out.println("Área do trapezio: " + trap.calcularArea());
+ System.out.println("Perímetro do trapezio: " + trap.calcularPerimetro());
+ scanner.close();
+ }
+}
+⦁ Crie uma classe chamada “PoupaBanco” que possua atributos para armazenar o número da
+conta, nome do titular e saldo. Adicione métodos para realizar depósitos e saques.
+import java.util.Scanner;
+public class PoupaBanco {
+ private int numConta;
+ private String nomeTitular;
+ private float saldo;
+ public PoupaBanco(int numConta, String nomeTitular, float saldo) {
+ this.numConta = numConta;
+ this.nomeTitular = nomeTitular;
+ this.saldo = saldo;
+ }
+ public void depositar(float valor) {
+ saldo = saldo + valor;
+ System.out.println("Depósito de R$" + valor + " realizado com sucesso.");
+ }
+ public void sacar(float valor) {
+ if (valor > saldo) {
+ System.out.println("Saldo insuficiente.");
+ } else {
+ saldo = saldo - valor;
+ System.out.println("Saque de R$" + valor + " realizado com sucesso.");
+ }
+ }
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+ System.out.println("Digite o número da conta:");
+ int numConta = scanner.nextInt();
+ scanner.nextLine();
+ System.out.println("Digite o nome do titular:");
+ String nomeTitular = scanner.nextLine();
+ System.out.println("Digite o saldo inicial:");
+ float saldo = scanner.nextFloat();
+ PoupaBanco conta = new PoupaBanco(numConta, nomeTitular, saldo);
+ System.out.println("Conta criada com sucesso para " + conta.nomeTitular);
+ System.out.println("Saldo atual: R$" + conta.saldo);
+ System.out.println("Digite o valor a depositar:");
+ float valorDeposito = scanner.nextFloat();
+ conta.depositar(valorDeposito);
+ System.out.println("Saldo atual: R$" + conta.saldo);
+ System.out.println("Digite o valor a sacar:");
+ float valorSaque = scanner.nextFloat();
+ conta.sacar(valorSaque);
+ System.out.println("Saldo atual: R$" + conta.saldo);
+ scanner.close();
+ }
+}
+⦁ Crie uma classe chamada “Quadrado” que possua atributos para armazenar o lado.
+Implemente métodos para calcular a área e o perímetro do quadrado.
+import java.util.Scanner;
+public class Quadrado {
+ private float lado;
+ public Quadrado(float lado) {
+ this.lado = lado;
+ }
+ public float calcularArea() {
+ return lado * lado;
+ }
+ public float calcularPerimetro() {
+ return lado * 4;
+ }
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+ System.out.println("Digite o valor do lado do quadrado:");
+ float lado = scanner.nextFloat();
+ Quadrado quadrado = new Quadrado(lado);
+ System.out.println("Área do quadrado: " + quadrado.calcularArea());
+ System.out.println("Perímetro do quadrado: " + quadrado.calcularPerimetro());
+ scanner.close();
+ }
+}
+⦁ Implemente uma classe chamada “Paciente” que possua atributos para armazenar o nome, a
+matrícula e remédios.
+import java.util.Scanner;
+public class Paciente {
+ public String nome;
+ public int matricula;
+ public String remedios;
+ public Paciente(String nome, int matricula, String remedios) {
+ this.nome = nome;
+ this.matricula = matricula;
+ this.remedios = remedios;
+ }
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+ System.out.println("Digite o nome do paciente:");
+ String nome = scanner.nextLine();
+ System.out.println("Digite a matrícula do paciente:");
+ int matricula = scanner.nextInt();
+ scanner.nextLine();
+ System.out.println("Digite os remédios do paciente:");
+ String remedios = scanner.nextLine();
+ Paciente paciente = new Paciente(nome, matricula, remedios);
+ System.out.println("Nome: " + paciente.nome);
+ System.out.println("Matrícula: " + paciente.matricula);
+ System.out.println("Remédios: " + paciente.remedios);
+ scanner.close();
+ }
+}
+⦁ Crie uma classe chamada “Funcionário” com atributos para armazenar o nome, o salário e o
+cargo do funcionário. Implemente métodos para calcular o salário líquido, considerando descontos
+de impostos e benefícios.
+import java.util.Scanner;
+public class Funcionario {
+ private String nome;
+ private float salario;
+ private String cargo;
+ public Funcionario(String nome, float salario, String cargo) {
+ this.nome = nome;
+ this.salario = salario;
+ this.cargo = cargo;
+ }
+ public float calcSalLiqui(float descoImpostos, float beneficios) {
+ float salLiquido = salario - (salario * descoImpostos) + beneficios;
+ return salLiquido;
+ }
+ public static void main(String[] args) {
+ Scanner scanner = new Scanner(System.in);
+ System.out.println("Digite o nome do funcionário:");
+ String nome = scanner.nextLine();
+ System.out.println("Digite o salário do funcionário:");
+ float salario = scanner.nextFloat();
+ scanner.nextLine();
+ System.out.println("Digite o cargo do funcionário:");
+ String cargo = scanner.nextLine();
+ System.out.println("Digite o desconto de impostos (em decimal):");
+ float descoImpostos = scanner.nextFloat();
+ System.out.println("Digite o valor dos benefícios:");
+ float beneficios = scanner.nextFloat();
+ Funcionario funcionario = new Funcionario(nome, salario, cargo);
+ float salLiquido = funcionario.calcSalLiqui(descoImpostos, beneficios);
+ System.out.println("Salário líquido de " + funcionario.nome + ": R$" + salLiquido);
+ scanner.close();
+ }
+}

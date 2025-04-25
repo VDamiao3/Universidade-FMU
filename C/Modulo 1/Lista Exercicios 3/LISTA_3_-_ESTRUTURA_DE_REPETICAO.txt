@@ -1,0 +1,147 @@
+1) Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade de
+números pares e a quantidade de números ímpares. Dica: utilize contador.
+2) Faça um programa que peça para n pessoas a sua idade, ao final o programa deverá
+verificar se a média de idade da turma varia entre [0 e 25], [26 e 60] e [maior que 60]; e
+então, dizer se a turma é jovem, adulta ou idosa, conforme a média calculada. Dica: utilize
+acumulador.
+3) Numa eleição existem três candidatos. Faça um programa que peça o número total de
+eleitores (n). Peça para cada eleitor votar e ao final mostrar o número de votos de cada
+candidato. Dica: utilize contador.
+4) (URI-1079) Leia 1 valor inteiro N, que representa o número de casos de teste que
+vem a seguir. Cada caso de teste consiste de 3 valores reais, cada um deles com uma
+casa decimal. Apresente a média ponderada para cada um destes conjuntos de 3 valores,
+sendo que o primeiro valor tem peso 2, o segundo valor tem peso 3 e o terceiro valor
+tem peso 5.
+Entrada: O arquivo de entrada contém um valor inteiro N na primeira linha.
+Cada N linha a seguir contém um caso de teste com três valores com uma casa decimal
+cada valor.
+Saída: Para cada caso de teste, imprima a média ponderada dos 3 valores, conforme
+exemplo abaixo.
+
+
+
+
+1-)
+#include <stdio.h>
+int n1,n2,QuantPar,QuantImp;
+int main()
+{
+ for(int i=0;i<10;i++){
+ printf("Digite o numero ");
+ scanf("%d",&n1);
+ if (n1 % 2 == 0) {
+ puts("é par");
+ QuantPar=QuantPar+1;
+ } else {
+ puts("é impar");
+ QuantImp=QuantImp+1;
+ }
+ }
+ printf("Quantidade de impar %d \n", QuantImp);
+ printf("Quantidade de par %d \n", QuantPar);
+
+ return 0;
+}
+
+2-)
+#include <stdio.h>
+int QuantAlunos,idade,Media,Faixa1,Faixa2,Faixa3;
+int main()
+{
+ printf("Digite a quantidade de alunos ");
+ scanf("%d",&QuantAlunos);
+ for(int i=0;i<QuantAlunos; i++){
+
+ printf("informe a idade do aluno ");
+ scanf("%d",&idade);
+ if(idade<=25 && idade>0)
+ {
+ Faixa1=Faixa1+1;
+ }else if(idade>=26 && idade<=60)
+ {
+ Faixa2=Faixa2+1;
+ }else if(idade>60)
+ {
+ Faixa3=Faixa3+1;
+ }else{
+ printf("Erro");
+ }
+
+ }
+
+ if(Faixa1>Faixa2 && Faixa1>Faixa3)
+ {
+ printf("Turma Jovem");
+ }else if(Faixa2>Faixa3 && Faixa2>Faixa1){
+ printf("Turma Adulta");
+ }else if(Faixa3>Faixa2 && Faixa3>Faixa1){
+ printf("Turma Idosa");
+ }
+
+ return 0;
+}
+3-)
+#include <stdio.h>
+int candidato1,candidato2,candidato3,TotalVotos;
+int eleitores, votos;
+int main()
+{
+ printf("Digite o numero de eleitores \n");
+ scanf("%d",&eleitores);
+ for(int i=0;i<eleitores;i++){
+ printf("digite o numero do voto \n");
+ printf("1 para candidato1\n");
+ printf("2 para candidato2 \n");
+ printf("3 para candidato3 \n");
+ scanf("%d",&votos);
+ if(votos==1){
+ candidato1=candidato1+1;
+ TotalVotos=TotalVotos+1;
+ }else if(votos==2){
+ candidato2=candidato2+1;
+ TotalVotos=TotalVotos+1;
+ }else if(votos==3){
+ candidato3=candidato3+1;
+ TotalVotos=TotalVotos+1;
+ }else{
+ ("Digite algo valido \n");
+ }
+
+ }
+ printf("Quantidades de votos são %d",TotalVotos);
+ printf("\n candidato 1 = %d",candidato1);
+ printf("\n candidato 2 = %d",candidato2);
+ printf("\n candidato 3 = %d",candidato3);
+
+ return 0;
+}
+4-)
+#include <stdio.h>
+int casos;
+float n1,n2,n3,SomaPeso,media,result;
+float peso1,peso2,peso3;
+int main()
+{
+ printf("Digite valor casos/vezes \n");
+ scanf("%d",&casos);
+ for(int i=0;i<casos;i++)
+ {
+ printf("Digite numero 1 \n");
+ scanf("%f",&n1);
+ peso1=2;
+ printf("Digite numero 2 \n");
+ scanf("%f",&n2);
+ peso2=3;
+ printf("Digite numero 3 \n");
+ scanf("%f",&n3);
+ peso3=5;
+
+ media=n1+n2+n3;
+ SomaPeso=peso1+peso2+peso3;
+ result=media/SomaPeso;
+
+ printf("A media Ponderada %.1f \n",result);
+ }
+
+ return 0;
+}

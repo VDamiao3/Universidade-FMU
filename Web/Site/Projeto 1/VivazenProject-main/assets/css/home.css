@@ -1,0 +1,40 @@
+main {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden ;
+}
+
+
+main img{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  column-gap: 15px;
+  background-color:  var(--cinza-claro);
+  padding: 4rem;
+  font-family:"Poppins", Arial, Helvetica, sans-serif;
+}
+.container p{
+  width: 50%;
+}
+.container img{
+  border-radius: 10px;
+}
+
+@media screen and (width < 700px){
+  .container{
+    flex-direction: column;
+    
+  }
+  .container p {
+    width: 90%;
+    margin-bottom: 4rem;
+  }
+}

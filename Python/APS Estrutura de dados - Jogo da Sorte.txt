@@ -1,0 +1,29 @@
+print("RODA DA SORTE! )XD")
+print("Digite número entre 0-9 e/ou letras entre a-z:")
+sorteio=[]
+for num in range(3):
+ while True:
+ try:
+ sorte=input()
+ if not (sorte.isalpha() or sorte.isdigit()):
+ raise ValueError
+ break
+ except ValueError:
+ print("\nDigito INVÁLIDO. Tente novamente")
+ sorteio.append(sorte)
+premio={"premio1":('6', '6', '6'), "premio2":('a', 'b', 'a'),
+"premio3":('o','l','a'), "premio4":('m', '1', '4'), "premio5":('1','o', '1')}
+print(sorteio)
+if sorteio == ['6', '6', '6']:
+ print("VOCÊ GANHOU!!! ;D")
+
+elif sorteio == ['a', 'b', 'a']:
+ print("VOCÊ GANHOU!!! ;D")
+elif sorteio == ['o','l','a']:
+ print("VOCÊ GANHOU!!! ;D")
+elif sorteio == ['m', '1', '4']:
+ print("VOCÊ GANHOU!!! ;D")
+elif sorteio == ['1','o', '1']:
+ print("VOCÊ GANHOU!!! ;D")
+else:
+ print("você P-E-R-D-E-U !!! :(")

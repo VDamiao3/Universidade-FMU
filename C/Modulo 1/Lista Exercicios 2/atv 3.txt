@@ -1,0 +1,26 @@
+
+#include <iostream>
+
+using namespace std;
+
+float corrida, dindin;
+char uber;
+int main(){
+ 
+ printf("\n uma corridinha? s/n ");
+ scanf("%s", &uber);
+ while(uber=='s'){
+ printf("\n fala ai os KM ai maratonista ");
+ scanf("%f", &corrida);
+
+ 
+ dindin=4.90+3.00*corrida;
+ 
+ printf("\n tu correu isso menó?\n");
+ printf("\n entao paga o trampo ai: %.2fR$ \n", dindin);
+ printf("\n mais uma corridinha? s/n ");
+ scanf("%s", &uber);
+ }
+ printf("\n Bom descanso meu nobre ");
+ return 0;
+}

@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Função para intercalar duas metades do vetor de forma ordenada
+void intercala(int *v, int comeco, int meio, int fim) {
+    int com1 = comeco, com2 = meio + 1, comaux = 0, n = fim - comeco + 1;
+    int *w = (int*) malloc(n * sizeof(int));
+
+    // Intercalação das duas metades
+    while (com1 <= meio && com2 <= fim) {
+        if (v[com1] < v[com2]) {
+            w[comaux] = v[com1];
+            com1++;
+        } else {
+            w[comaux] = v[com2];
+            com2++;
+        }
+        comaux++;
+    }
+
+    // Copia os elementos restantes de 'v' para 'w'
+    while (com1 <= meio) {
+        w[comaux] = v[com1];
+        com1++;
+        comaux++;
+    }
+    while (com2 <= fim) {
+        w[comaux] = v[com2];
+        com2++;
+        comaux++;
+    }
+
+    // Copia o vetor ordenado de volta para o vetor original
+    for (comaux = 0; comaux < n; comaux++) {
+        v[comeco + comaux] = w[comaux];
+    }
+
+    free(w); // Libera a memória alocada
+}
+
+// Função de ordenação mergesort
+void mergesort(int *v, int comeco, int fim) {
+    if (comeco < fim) {
+        int meio = (comeco + fim) / 2;
+        mergesort(v, comeco, meio); // Ordena a primeira metade
+        mergesort(v, meio + 1, fim); // Ordena a segunda metade
+        intercala(v, comeco, meio, fim); // Intercala as duas metades
+    }
+}
+
+int main(void) {
+    int vetor[] = {100, 30, 1, 0, 9, 8, 3, 23, 7, 90, 87, 72};
+    int i;
+    int tamanho = sizeof(vetor) / sizeof(vetor[0]);
+
+    mergesort(vetor, 0, tamanho - 1); // Chama o mergesort
+
+    // Imprime o vetor ordenado
+    for (i = 0; i < tamanho; i++) {
+        printf("%d ", vetor[i]);
+    }
+
+    return 0;
+}

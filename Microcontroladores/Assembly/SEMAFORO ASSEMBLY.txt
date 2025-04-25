@@ -1,0 +1,27 @@
+; Atrasos De Farois -------------------------
+Delay_5S:
+    MOV R2, #22        ; 5 Segundos
+DLoop_5S:
+    MOV R1, #255        
+Atraso_5S:             ; Ponto de Repetição
+    MOV R0, #255        
+    DJNZ R0, Atraso_5S ; R0 até 0 Atraso curto
+    DJNZ R1, DLoop_5S  ; R1 até 0 
+    DJNZ R2, DLoop_5S  ; R2 até 0 
+    RET                ; Volta para Main
+
+; Atrasos Farol Amarelo -------------------------
+Delay_2S:              
+    MOV R2, #9         ; 2 Segundos
+DLoop_2S:
+    MOV R1, #255       
+Atraso_2S:             ; Ponto de Repetição   
+    MOV R0, #255        
+   DJNZ R0, Atraso_2S ; R0 até 0 Atraso curto
+   DJNZ R1, DLoop_2S  ; R1 até 0 
+   DJNZ R2, DLoop_2S  ; R2 até 0 
+    RET               ; Volta para Main
+
+END
+
+    

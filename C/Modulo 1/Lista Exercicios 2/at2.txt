@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+int intervalo[5]={0,25,50,75,100};
+float n1;
+int main(){
+printf("Insira um numero real:\n");
+scanf("%f",&n1);
+if(0<=n1 && n1<=25){
+    
+cout <<"Esta no intervalo ["<<intervalo[0]<<","<<intervalo[1]<<"]\n";
+
+}
+else if(25<=n1 && n1<=50){
+    
+cout <<"Esta no intervalo ["<<intervalo[1]<<","<<intervalo[2]<<"]\n";
+
+}
+else if(50<=n1 && n1<=75){
+    
+cout <<"Esta no intervalo ["<<intervalo[2]<<","<<intervalo[3]<<"]\n";
+
+}
+else if(75<=n1 && n1<=100){
+    
+cout <<"Esta no intervalo ["<<intervalo[3]<<","<<intervalo[4]<<"]\n";
+
+}
+else{
+printf("Fora do intervalo");
+}
+return 0;
+}

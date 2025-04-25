@@ -1,0 +1,50 @@
+import panda is pd
+vendas = pd.read_excel("/content/baseDados.xlsx")
+#vendas_pd arquivo em exel
+
+display(vendas_pd.head())
+#assim aparece ate 5
+display(vendas_pd.head(3))
+#aparece ate 3
+display(vendas.pd.shape)
+# type =  tupla
+total=vendas_pd.shape
+print(total)
+display(vendas.pd.describe())
+#apresenta estatisticas
+
+display(vendas_pd[['Tipo','Descricao']])
+#imprimindo colunas selecionadas, para cada coluna coloca mais um cochete
+
+#-------------
+
+
+import panda is pd
+vendas = pd.read_excel("/content/baseDados.xlsx")
+
+#indice da linha / loc de localizacao
+display(vendas_pd.loc[0])
+#mostrando mais de uma linha
+display(vendas_pd.loc[0:1])
+#--------------------0 ate 1
+display(vendas_pd.loc[[0,2]])
+#mostrando a linha 0 e a linha 2
+display(vendas_pd.loc[['Tipo'] == 'Receita'])
+#trazendo o Tipo sendo igual a receita
+display(vendas)df.loc[
+    (vendas_df['Tipo'] == 'Receita') &
+    (vendas_df['Mes'] == 'JAN') &
+    (vendas_df['Receitas'] >= 3000)]
+
+
+import pandas as pd
+vendas_pd.read_excel("/content/baseDados.xlsx")
+display(vendas_pd)
+
+
+
+import pandas as pd
+vendas_pd.groubpy('Categoria')['Receita'].sum()
+#somando as receitas
+
+data.airports()

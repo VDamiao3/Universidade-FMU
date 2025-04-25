@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int idade, ano, nasc, AnoServ;
+
+int main()
+{
+
+    ano=2023;
+    printf("digite ano de nascimento: ");
+    scanf("%d", &nasc);
+    idade=ano-nasc;
+    printf("Quantos anos servico possui? ");
+    scanf("%d", &AnoServ);
+    
+    
+    if(idade>=65 && idade<150 && AnoServ>35){
+        printf("pode aposentar");
+    }
+    
+    else if(idade <0 || idade>150 || AnoServ<0 || AnoServ>150 || idade<0 && AnoServ<0 || idade>150 && AnoServ>150){
+        printf("invalido");
+    }
+    
+    else if(idade>=0 && idade<65 || idade>=0 && AnoServ<35){
+        printf("nao pode aposentar");
+    }

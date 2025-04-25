@@ -1,0 +1,104 @@
+#LISTA SÃO HETEROGÊNEAS (aceitam vários tipos de valores, com int, float, string)
+lista=[100,200,300,400, [3,4,5,6,7]]
+print(lista[4][-1])
+print(lista)
+lista[0]=900 #LISTA SÃO MUTÁVEIS
+print(lista)
+type(lista)
+
+#tuplas - estrutura de dados
+#imutáveis
+#tuplas ()
+num=(1,2,3)
+print(num)
+type(num)
+
+print(num[2])
+num[2]=4   #tuplas são imutáveis
+print(num[2])
+
+num = ('1', '2', 3, 4.5)
+print(f"{num[-2]} - {num[3]}", "\n")
+print(num[0:4], "\n") #range
+
+print(num[:2])
+print(num[2:])
+
+frutas=('maça', 'banana', 'uva', 'morango')#tupla
+
+#convertendo uma tupla em lista
+frutas=list(frutas)
+print(type(frutas))
+
+frutas.append("abacate")#colocar sempre no final
+print(frutas)
+
+#convertendo uma lista para tupla
+frutas=tuple(frutas)
+print(type(frutas))
+
+
+
+tupla1=(1,2,3,4)
+tupla2=('a', "b", "c", 'd')
+tupla3=tupla1+tupla2
+print(tupla3)
+
+lista1=[1,2,3,4]
+lista2=["a", 'b', 'c', "d"]
+lista3=lista1+lista2
+print(lista3)
+
+num=()
+
+for i in range(5) :
+  x=int(input("digite o número: "))             #
+  num=num+(x, )
+  print(num)
+
+lista=[1,2,3,4]
+lista2=['a', 'b', 'c']
+lista3=lista+lista2
+
+print(lista3)
+
+time=("corinthians", "palmeiras", "são paulo", "santos", "atlético", "flamengo", "fluminense", "cruzeiro", "vasco", "botafogo")
+
+sorted_time = sorted(time)
+
+print(sorted_time)
+print("\n")
+print("Os 3 primeiros colocados:")
+print("1° colocado: ", time[1])
+print("2° colocado: ", time[0])
+print("3° colocado: ", time[3])
+print("\n")
+print("Os 3 últimos:")
+print("8° colocado: ", time[6])
+print("9° colocado: ", time[9])
+print("10° colocado: ", time[4])
+print("Santos terminou em 3° posição")
+
+
+dias=("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
+
+x=int(input("digite um número de 1 a 7: "))-1
+print(dias[x])
+
+num=(1,2,3,4,5)#tupla
+
+num = list(num)#transformando tupla em lista
+print(type(num))
+
+num.append(10)
+num = tuple(num)
+print(num)
+
+
+num=()
+x=int(input("digite um número ou zero(0) para encerrar: "))
+
+while x !=0 :
+  x=int(input("digite o número ou zero(0) para encerrar: "))             #
+  num=num+(x, )
+  print(num)

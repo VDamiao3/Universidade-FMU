@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unidades - Clínica VivaZen</title>
+  <link rel="stylesheet" href="/assets/css/index.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- COLOQUE O NOVO MENU FIXADO NO TOPO AQUI -->
+  <header>
+    <a href="/"><img src="/assets/img/logo.png" alt="" class="logo" /></a>
+    <nav>
+      <a class="link-header" href="/sobre/">Sobre</a>
+      <a class="link-header" href="/unidades/">Unidades</a>
+      <a class="link-header" href="/campanhas/">Campanhas</a>
+      <a class="link-header" href="/planos/">Planos</a>
+      <a class="entrar" href="/login/">Entrar</a>
+    </nav>
+    <button class="menu" onclick="toggleMenu(this)">
+      <svg width="100" height="100" viewBox="0 0 100 100">
+        <path class="line line1"
+          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+        <path class="line line2" d="M 20,50 H 80" />
+        <path class="line line3"
+          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+      </svg>
+    </button>
+
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="/sobre/">Sobre</a></li>
+        <li><a href="/unidades/">Unidades</a></li>
+        <li><a href="/campanhas/">Campanhas</a></li>
+        <li><a href="/planos/">Planos</a></li>
+        <li><a href="/login/">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- COLOQUE O NOVO MENU FIXADO NO TOPO AQUI -->
+  <main>
+    <section class="unidades">
+      <h2>Nossas Unidades</h2>
+      <div class="cards">
+        <!-- Unidade 1 -->
+        <div class="card">
+          <div class="imagem">
+            <img src="/assets/img/Brooklin.png" alt="Fachada da unidade Brooklin" />
+          </div>
+          <p><strong>Brooklin</strong>
+            <br>Horário: 08h - 18h
+            <br>Dias: Segunda a Sábado
+            <br>Contato: (11) 0000-0000
+          </p>
+          <div class="botoes">
+            <a href="#mapaBrooklin" class="botao"><i class="fa-solid fa-map-location-dot"></i> Mapa</a>
+            <a href="/login/" class="botao agendar"><i class="fa-solid fa-calendar-check"></i> Agendar</a>
+          </div>
+        </div>
+
+        <!-- Unidade 2 -->
+        <div class="card">
+          <div class="imagem">
+            <img src="/assets/img/Tatuape.png" alt="Fachada da unidade Tatuapé" />
+          </div>
+          <p><strong>Tatuapé</strong>
+            <br>Horário: 08h - 18h
+            <br>Dias: Segunda a Sábado
+            <br>Contato: (11) 0000-0000
+          </p>
+          <div class="botoes">
+            <a href="#mapaTatuape" class="botao"><i class="fa-solid fa-map-location-dot"></i> Mapa</a>
+            <a href="#" class="botao agendar"><i class="fa-solid fa-calendar-check"></i> Agendar</a>
+          </div>
+        </div>
+
+        <!-- Unidade 3 -->
+        <div class="card">
+          <div class="imagem">
+            <img src="/assets/img/Capao.png" alt="Fachada da unidade Capão Redondo" />
+          </div>
+          <p><strong>Capão Redondo</strong>
+            <br>Horário: 08h - 18h
+            <br>Dias: Segunda a Sábado
+            <br>Contato: (11) 0000-0000
+          </p>
+          <div class="botoes">
+            <a href="#mapaCapao" class="botao"><i class="fa-solid fa-map-location-dot"></i> Mapa</a>
+            <a href="/login/" class="botao agendar"><i class="fa-solid fa-calendar-check"></i> Agendar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mapas -->
+    <section id="mapaBrooklin" class="mapa-opcional">
+      <div class="mapa-conteudo">
+        <div class="info">
+          <h3 class="unidade-nome">Unidade Brooklin</h3>
+          <p>
+            Localização: Rua NovaYork<br>
+            Bairro: Itai Bibi<br>
+            Número: 315<br>
+            CEP:  0138-000<br>
+            Horário: 08h - 18h<br>
+            Contato: (11) 40028-922<br>
+          </p>
+          <a href="/login/" class="botao agendar"><i class="fa-solid fa-calendar-check"></i> Agendar</a>
+        </div>
+        <div class="mapa">
+          <a href="https://www.google.com/maps" target="_blank">
+            <div class="mapa-box destaque">
+              <!--
+              <img src="mapaBrooklin.png" alt="Mapa da unidade Brooklin" />
+              -->
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.864594091771!2d-46.68617378450378!3d-23.575747668320243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c219b80cf9%3A0xf351f3d104b1faaa!2sBrooklin%20Paulista!5e0!3m2!1spt-BR!2sbr!4v1616008964180!5m2!1spt-BR!2sbr"
+                width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mapaTatuape" class="mapa-opcional">
+      <div class="mapa-conteudo">
+        <div class="info">
+          <h3 class="unidade-nome">Unidade Tatuapé</h3>
+          <p>
+            Localização: Rua NovaYork<br>
+            Bairro: Itai Bibi<br>
+            Número: 315<br>
+            CEP:  0138-000<br>
+            Horário: 08h - 18h<br>
+            Contato: (11) 40028-922<br>
+          </p>
+          <a href="#" class="botao agendar"><i class="fa-solid fa-calendar-check"></i> Agendar</a>
+        </div>
+        <div class="mapa">
+          <a href="https://www.google.com/maps" target="_blank">
+            <div class="mapa-box destaque">
+              <!--
+              <img src="mapaTatuape.png" alt="Mapa da unidade Tatuapé" />
+              -->
+
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14631.743357907186!2d-46.583909907763676!3d-23.534809963250723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5ee7acdd50f5%3A0x3eeaf24eff368507!2zVGF0dWFww6ksIFPDo28gUGF1bG8gLSBTUA!5e0!3m2!1spt-BR!2sbr!4v1744679178180!5m2!1spt-BR!2sbr"
+                width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mapaCapao" class="mapa-opcional">
+      <div class="mapa-conteudo">
+        <div class="info">
+          <h3 class="unidade-nome">Unidade Capão Redondo</h3>
+          <p>
+            Localização: Rua NovaYork<br>
+            Bairro: Itai Bibi<br>
+            Número: 315<br>
+            CEP:  0138-000<br>
+            Horário: 08h - 18h<br>
+            Contato: (11) 40028-922<br>
+          </p>
+          <a href="#" class="botao agendar"><i class="fa-solid fa-calendar-check"></i> Agendar</a>
+        </div>
+        <div class="mapa">
+          <a href="https://www.google.com/maps" target="_blank">
+            <div class="mapa-box destaque">
+              <!--
+              <img src="mapaCapao.png" alt="Mapa da unidade Capão Redondo" />
+            -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12291.285722816463!2d-46.77849977046808!3d-23.668049583371232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53b5b3a12aa9%3A0xff40d03fdffd625c!2sCap%C3%A3o%20Redondo%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1744674059255!5m2!1spt-BR!2sbr"
+                width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+
+
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Clínica VivaZen. Todos os direitos reservados.
+  </footer>
+
+</body>
+
+</html>

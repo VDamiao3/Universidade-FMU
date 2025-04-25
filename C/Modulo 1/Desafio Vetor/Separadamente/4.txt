@@ -1,0 +1,31 @@
+int main() {
+    
+    int vetorFrente[6];
+    int vetorVerso[6];
+
+    
+    printf("Digite valor para vetor sentido horario:\n");
+    for (int i = 0; i < 6; i++) {
+        printf("posicao %d de 6: ", i + 1);
+        scanf("%d", &vetorFrente[i]);
+    }
+
+   
+    for (int i = 0; i < 6; i++) {
+        vetorVerso[i] = vetorFrente[5 - i];
+    }
+
+   
+    printf("\n Vetor frente:\n");
+    for (int i = 0; i < 6; i++) {
+        printf("%d ", vetorFrente[i]);
+    }
+
+    printf("\n Vetor inverso:\n");
+    for (int i = 0; i < 6; i++) {
+        printf("%d ", vetorVerso[i]);
+    }
+
+
+    return 0;
+}

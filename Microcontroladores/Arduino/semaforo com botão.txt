@@ -1,0 +1,128 @@
+// C++ code
+//
+
+int button = 13; // pino do botão
+unsigned long tempo; //Guarda o Tempo atual
+
+void setup()
+{
+   tempo = millis(); //Tempo do início do programa
+  
+  
+  pinMode(2, OUTPUT); 
+  pinMode(3, OUTPUT); 
+  pinMode(4, OUTPUT); 
+  
+  pinMode(8, OUTPUT); 
+  pinMode(9, OUTPUT); 
+
+  
+  pinMode(button, INPUT);
+ 
+}
+
+void loop()
+{
+  int delayL = 5000;
+  int delayC = 2000;
+ 
+  
+  while ( digitalRead(button)== LOW) {
+   
+    
+    if(millis()-tempo >= 15000){
+    tempo = millis(); //reseta o valor do tempo
+    }
+    if(millis()-tempo < 5000){
+    verdeC();
+    vermelhoP();  
+    }else if(millis()-tempo > 5000 && millis()-tempo < 10000){ 
+    amareloC();
+       
+    } else if(millis()-tempo > 10000 && millis()-tempo < 13000){
+    vermelhoC();
+    verdeP();
+    } else if(millis()-tempo > 13000){
+    amareloP();
+    }
+  }
+    
+   if( digitalRead(button)== HIGH) {
+   amareloC();
+   delay(delayC);
+   vermelhoC();
+   verdeP();
+   delay(delayL);
+   amareloP();
+   vermelhoP();
+   tempo=millis();
+    }
+}
+
+//////////////////////////////////////////////
+  void amareloC(){
+  //amarelo
+    
+    
+  digitalWrite(8,LOW);
+  digitalWrite(9,HIGH);
+  
+  digitalWrite(2,LOW);
+  digitalWrite(3,HIGH);
+  digitalWrite(4,LOW);
+  
+  return;
+     }
+
+void amareloP(){
+  
+  ////////////aviso de fechar pedreste
+    digitalWrite(8,LOW);
+  
+  for(int i=0; i<2; i++){
+    digitalWrite(9,HIGH);
+    delay(1000);
+    digitalWrite(9,LOW);
+    delay(1000);
+  }
+}
+
+  
+  void vermelhoC(){
+  //vermelho carro
+  
+  
+  digitalWrite(2,HIGH);
+  digitalWrite(3,LOW);
+  digitalWrite(4,LOW);
+  
+    return;
+    }
+     
+  void verdeC(){
+    //verde carro
+  
+  vermelhoP();
+  digitalWrite(2,LOW);
+  digitalWrite(3,LOW);
+  digitalWrite(4,HIGH);
+  
+  return; 
+  }
+  
+  void vermelhoP(){
+    
+  digitalWrite(8,LOW);
+  digitalWrite(9,HIGH);
+  
+    return;
+  }
+
+ void verdeP(){
+     
+  digitalWrite(8,HIGH);
+  digitalWrite(9,LOW);
+  
+    
+    return;
+  }

@@ -1,0 +1,44 @@
+img {
+  width: 100%;
+}
+h2,
+h4,
+h3 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+section {
+  background-color: var(--verde-oliva);
+  padding: 4rem 4rem;
+  display: flex;
+  justify-content: stretch;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.infobox {
+  background-color: #eae8e7;
+  padding: 1.2rem;
+  border-left: 10px solid #7b7b7b;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.infobox:hover {
+  transform: translateY(-4px);
+}
+p,
+li {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 13pt;
+}
+ul {
+  margin-left: 3rem;
+}
+
+@media screen and (width <= 800px) {
+  section {
+    padding: 4rem 2rem;
+  }
+}

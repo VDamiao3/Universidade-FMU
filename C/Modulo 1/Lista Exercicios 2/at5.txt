@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+#include<stdio.h>
+
+float a, b, c;
+int main(){
+ 
+ //comando de entrada
+ printf("mete um numero pro A: \n");
+ scanf("%f", &a);
+ printf("mete um numero pro B: \n");
+ scanf("%f", &b);
+ printf("mete um numero pro C: \n");
+ scanf("%f", &c);
+ 
+ //comando de saída
+if(a>b && b>c ){
+ cout<<"A ordem fica assim: "<< c<< b<< a; //3 2 1
+}
+ if(c<a && c>b){
+ cout<<"A ordem fica assim: "<< b<< c<< a;//3 1 2
+ }
+ if(b>a && a>c){
+ cout<<"A ordem fica assim: "<< c<< a<< b;//2 3 1
+ }
+ if(a<c && c<b){
+ cout<<"A ordem fica assim: "<< a<< c<< b;//1 3 2
+ }
+ if(c>a && a>b){
+ cout<<"A ordem fica assim: "<< b<< a<< c;//2 1 3
+ }
+ else if(a<b && b<c){
+ cout<<"A ordem fica assim: "<< a<< b<< c;//1 2 3
+ }
+
+ return 0;
+}

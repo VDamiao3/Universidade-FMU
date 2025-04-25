@@ -1,0 +1,54 @@
+main {
+  width: 100%;
+  min-height: 100vh; /* ← melhor que height fixa pra evitar cortes */
+  padding: 6rem 2rem; /* ← padding lateral reduzido pra telas pequenas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap; /* ← permite quebra em telas menores */
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background-color: var(--cinza-claro);
+}
+
+main h2 {
+  font-size: clamp(20pt, 4vw, 26pt); /* responsivo */
+  color: var(--verde-escuro);
+}
+
+main img {
+  width: 100%;
+  max-width: 400px; /* ← limita tamanho grande */
+  height: auto;
+  object-fit: contain;
+}
+
+main div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px; /* evita textos muito longos em telas grandes */
+  width: 100%;
+}
+
+main p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsividade adicional */
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 8rem 1.5rem;
+  }
+
+  main img {
+    max-width: 90%;
+  }
+
+  main p {
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,78 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int ddd;
+
+
+int info[8] = {61,71,11,21,32,19,27,31} ;
+
+char descisao1,descisao2;
+int main (){
+    
+    
+    
+printf("Gostaria de fazer uma ligação interestadual? s/n \n");
+ scanf("%c",&descisao1);
+
+if(descisao1=='s'){
+
+
+ 
+cout << info[0]<<" Brasilia \n";
+cout << info[1]<<" Salvador \n";
+cout << info[2]<<" Sao Paulo \n";
+cout << info[3]<<" Rio de Janeiro \n";
+cout << info[4]<<" Juiz de Fora \n";
+cout << info[5]<<" Campinas \n";
+cout << info[6]<<" Vitoria \n";
+cout << info[7]<<" Belo Horizonte \n";
+
+printf("\n Insira o DDD abaixo: \n");
+
+
+
+
+scanf("%d",&ddd);
+if (ddd==61){
+printf("O DDD digitado foi de Brasilia!\n");
+}
+else if(ddd==71){
+printf("O DDD digitado foi de Salvador!\n");
+}
+else if(ddd==11){
+printf("O DDD digitado foi de Sao Paulo!\n");
+}
+else if(ddd==21){
+printf("O DDD digitado foi do Rio de Janeiro!\n");
+}
+else if(ddd==32){
+printf("O DDD digitado foi de Juiz de Fora!\n");
+}
+else if(ddd==19){
+printf("O DDD digitado foi de Campinas!\n");
+}
+else if(ddd==27){
+printf("O DDD digitado foi de Vitoria!\n");
+}
+else if(ddd==31){
+printf("O DDD digitado foi de Belo Horizonte!\n");
+}
+else{
+printf("DDD nao cadastrado!\n");
+}
+
+    }else{
+    printf("Obrigado Inbratel");
+    
+    }
+return 0;
+}

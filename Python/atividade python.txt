@@ -1,0 +1,36 @@
+print (' Voce ligou para o atendimento de denuncias ')
+print ('Responda com 0(falso) ou 1(verdadeiro) ')
+
+Perguntas = ['Telefonou para a vítima?', 'Esteve no local do crime?','Mora perto da vítima?','Devia para a vítima?',' Já trabalho com a vítima?']
+
+for i in Perguntas:
+  Tcount = input(Perguntas[i])
+  if Tcount == 1:
+   Tcount = Tcount+1
+
+  if Tcount == 2:
+   print('Voce é suspeito')
+  elif Tcount == 3 or Tcount == 4:
+   print( 'Voce é cumplice')
+  elif Tcount == 5:
+   print('Assassino')
+  else:
+   print('Inocente')
+
+
+#p1 = input('Telefonou para a vítima?')
+#p2 = input('Esteve no local do crime?')
+#p3 = input('Mora perto da vítima?')
+#p4= input('Devia para a vítima?')
+#p5 = input(' Já trabalho com a vítima?')
+
+
+
+ vetor[10]
+ for x in range(10):
+ valores = input(int('digite valor para vetor'))
+ vetor[x] = valores
+ print(vetor[x])
+
+
+

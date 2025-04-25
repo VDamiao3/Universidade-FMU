@@ -1,0 +1,77 @@
+append add final UNICO ITEM
+animals.append(wild_animals)
+
+extend add final MAIS DE UM ITEM 
+numbers2.extend(numbers1)
+
+insert inseri determinado / a.insert(len(a) ,x)
+prime_numbers.insert(4, 11)
+
+remove remove primeiro correspondente
+list.remove(element)
+meses.remove('janeiro')
+
+pop apagar determinado e retorna
+return_value = languages.pop(3)
+print('Return Value:', languages.pop(-3))
+
+clear limpar tudo
+list.clear()
+
+del indice e nao metodo
+del list_name [index] # Para excluir um valor único
+del list_name # Para excluir a lista inteira
+del meses[3]
+
+count() se contem/existe "info"
+meses.count('janeiro')
+
+join() junta em string
+meses_juntos = separador.join(meses)
+
+split() string em lista
+meses_separados = meses_juntos.split(separador)
+
+lista = list(tupla) tupla para lista
+tuple = tuple(lista) lista para tupla
+tupla = (1, 2, 3, 4, 5)
+# Tentativa de modificação (resultará em erro, já que as tuplas são imutáveis)
+sort ordernar alfabetico
+sorted MOSTRA como ficaria em alfabetico
+sorted(reverse=true) ordernado inverso
+
+
+
+lista[início:fim:passo]
+passo: Opcional. Define o incremento entre os elementos. Se não for especificado, o valor padrão é 1.
+sublista = lista[-3:]
+#[-3:] para obter ultimos 3
+
+
+
+
+
+dicionario_original = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+                        items( keys: values ,)
+
+ultimos_itens = list(dicionario.items())[-3:]
+#convertendo dicionario em lista para obter ultimos 3
+
+# Obtendo uma sublista de chaves
+sublista_chaves = list(dicionario_original.keys())[1:4]
+#convertendo em lista pegando apenas keys
+print(sublista_chaves)  # Saída: ['b', 'c', 'd']
+#convertendo em lista e pegando todo items
+sublista_itens = list(dicionario_original.items())[1:4]
+print(sublista_itens)  # Saída: [('b', 2), ('c', 3), ('d', 4)]
+
+
+================================
+notas = []
+for i in range(3):
+    nota = float(input("Digite a nota {}: ".format(i+1)))
+    notas.append(nota)
+media = sum(notas) / len(notas)
+print("A média das notas é:", media)
+
+.format(i+1): Esta é a função format() aplicada à string. Ela substitui o espaço reservado {} pelo valor de i+1. Assim, a mensagem exibida ao usuário será "Digite a nota 1: " na primeira iteração, "Digite a nota 2: " na segunda iteração, e assim por diante.

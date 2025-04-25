@@ -1,0 +1,139 @@
+// C++ code
+
+
+int led =9;
+
+int motor =10;
+
+
+
+void setup()
+{
+  pinMode(A0, INPUT);
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  float sinal;
+  float valor;
+  int atraso=0;
+  
+  
+  sinal = analogRead(A0); // entrada analogia potenciometro
+  Serial.println(sinal);
+  
+  //          analog      --     digital
+  //map(valor, in_min, in_max, out_min, out_max)
+  valor = map(sinal, 0, 1023, 0, 255);
+  
+  
+  
+  //se colocar apenas delay(valor) ficará imperceptivel 
+  //mas caso queira: 
+  /*
+    analogWrite(motor,sinal); //rotacao do motor
+    digitalWrite(led,HIGH);
+    delay(valor);
+    digitalWrite(led,LOW);
+    delay(valor);
+    */
+  
+  
+  //melhorando visualizacao de piscar  
+  //nao optei por delay++ pois assim o codigo fica mais preciso
+  //e um jeito mais rapido de resolver
+  
+ 
+  \end{verbatim}
+
+  \begin{verbatim}
+      
+   if(valor<=100){
+    analogWrite(motor,valor); //rotacao do motor
+    atraso=200;
+    digitalWrite(led,HIGH);
+    delay(atraso);
+    digitalWrite(led,LOW);
+    delay(atraso);
+    
+  }
+  if(valor>100 && valor<=200){
+    analogWrite(motor,valor);
+    atraso=400;
+    digitalWrite(led,HIGH);
+    delay(atraso);
+    digitalWrite(led,LOW);
+    delay(atraso);
+  }
+  if(valor>200 && valor<=300){
+    analogWrite(motor,valor);
+    atraso=800;
+    digitalWrite(led,HIGH);
+    delay(atraso);
+    digitalWrite(led,LOW);
+    delay(atraso);
+  }
+       
+  if(valor>300 && valor<=400){
+    analogWrite(motor,valor);
+    atraso=1600;
+    digitalWrite(led,HIGH);
+    delay(atraso);
+    digitalWrite(led,LOW);
+    delay(atraso);
+  }
+  
+  if(valor>400 && valor<=500){
+    analogWrite(motor,valor);
+    atraso=3200;
+    digitalWrite(led,HIGH);
+    delay(atraso);
+    digitalWrite(led,LOW);
+    delay(atraso);
+  }
+  if(valor>500 && valor<=600){
+    analogWrite(motor,valor);
+    atraso=6400;
+    digitalWrite(led,HIGH);
+    delay(atraso);
+    digitalWrite(led,LOW);
+    delay(atraso);
+  }
+  if(valor>600 && valor<=700){
+    analogWrite(motor,valor);
+    atraso=12800;
+    digitalWrite(led,HIGH);
+    delay(atraso);
+    digitalWrite(led,LOW);
+    delay(atraso);
+  }
+  if(valor>700 && valor<=800){
+    analogWrite(motor,valor);
+    atraso=25600;
+    digitalWrite(led,HIGH);
+    delay(atraso);
+    digitalWrite(led,LOW);
+    delay(atraso);
+  }
+  if(valor>800 && valor<=900){
+    analogWrite(motor,valor);
+    atraso=51200;
+    digitalWrite(led,HIGH);
+    delay(atraso);
+    digitalWrite(led,LOW);
+    delay(atraso);
+  }
+  if(valor>900){
+    analogWrite(motor,valor);
+    atraso=102400;
+    digitalWrite(led,HIGH);
+    delay(atraso);
+    digitalWrite(led,LOW);
+    delay(atraso);
+  }
+  
+  
+}
+  

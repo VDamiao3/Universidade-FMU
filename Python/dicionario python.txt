@@ -1,0 +1,156 @@
+dic = {"chave1": "verde",    "chave2": "azul",   "chave3": "vermelho", "chave4": "rose"} #dicionário
+print(type(dic))
+
+
+dic = {"chave1": "verde",    "chave2": "azul",   "chave3": "vermelho", "chave4": "rose", "chave5":"azul", "chave1":"vermelho"} #dicionário
+print(dic)
+
+#acessando os elementos do diocionário
+print(dic.keys())
+print(dic.values())
+print(dic.items)
+
+
+#incluindo novos conteúdos do dicionário
+
+dic = {"chave1": "verde",    "chave2": "azul",   "chave3": "vermelho", "chave4": "rose", "chave5":"azul", "chave1":"vermelho"} #dicionário
+dic["chave6"]="ciano"
+dic["chave7"]="marrom"
+print(dic)
+print("\n")
+
+#alterando o conteúdo do dicionário
+dic["chave2"]="laranja"
+print(dic)
+
+#atribuindo um valor de um item do dic a uma variável
+valor=dic["chave1"]
+print(valor)
+print("\n")
+chave=dic.get("chave2")#get:pegar
+print(chave)
+
+
+
+dic = {"chave1": "verde",    "chave2": "azul",   "chave3": "vermelho", "chave4": "rose", "chave5":"azul", "chave1":"vermelho"} #dicionário
+dic.items()
+print(dic.items())
+
+for chave in dic:
+  print(chave)
+
+
+for chave in dic.values():
+  print(chave)
+
+
+
+for chave in dic.keys():
+  print(chave)
+
+
+
+
+dic = {"chave1": "verde",    "chave2": "azul",   "chave3": "vermelho", "chave4": "rose", "chave5":"azul", "chave1":"vermelho"} #dicionário
+
+del dic["chave1"]
+valorexcl = dic.pop("chave4")
+print(dic)
+dic.clear() #excluir tudo
+print(dic)
+print(valorexcl)
+
+#get metodo para pegar valor
+#set para setar(alterar) um valor
+#ou seja tercerizar o serviço
+
+dic["palheta1":"Rosa"]
+pincel = dic.get("palheta1")
+
+for cor in dic: #desse jeito esta apenas imprimindo as chves para pegar valores veja o proximo for
+  print(cor)
+  for cor in dic.values():
+    print(cor) #agora sim esta imprimindo os valores
+
+    # mas ate agr seria ou um ou outro para imprimir de conjunto é a seguir
+
+    for cor in dic.items():
+      print (cor) # desse jeito esta imprimindo os intens do dicionario
+
+
+      #del.dic["cor1"] exclusao pelo indice
+      #dic.pop["cor4"] esvazia  nome disc.metodo()
+      #dic.clear() exclui todos os itens
+
+dic = {"chave1": "verde",    "chave2": ("azul", "vermelho"),   "chave3": "vermelho", "chave4": "rose", "chave5":"azul", } #dicionário
+print(dic)                            #colocando dois valores numa mesma chave
+print(len(dic))
+
+disciplinas ={"matematica":(9,7,5), "biologia":(7,2,7), "geografia":(8,10,9),"portugues": (6,4,3), "artes":(7,8,8)}
+print(disciplinas)
+
+disciplinas["química"]=(7, 8, 8)
+print(disciplinas)
+
+
+
+notamat=disciplinas["matematica"] #virou uma tupla
+med_mat = sum(notamat)/3 #sum: soma os valores de uma tupla
+print(med_mat)
+print("\n")
+
+#biologia
+nota_bio = disciplinas["biologia"]
+med_bio = sum(nota_bio)/3
+
+
+#geografia
+nota_geo = disciplinas["geografia"]
+med_geo = sum(nota_geo)/3
+
+
+
+#portugues
+nota_port = disciplinas["portugues"]
+med_port = sum(nota_port)/3
+
+
+#artes
+nota_arte = disciplinas['artes']
+med_arte = sum(nota_arte)/3
+
+#química
+nota_qui = disciplinas['química']
+med_qui = sum(nota_qui)/3 #sum somar valores da tupla
+
+print(f"Média de matemática: {med_mat}\n Média de biologia: {med_bio:.2f}\n Média de geografia: {med_geo}\n Média de português: {med_port:.2f}\n Média de artes: {med_arte:.2f}\n Média de química: {med_qui:.2f}")
+
+
+#for disciplinas in disciplinas.values():
+#somaNotas=somaNotas+nota
+#print(f"Media= {somaNotas/len(notas):.2}")
+
+
+frutas={"maçã":10, "abacate":15, "melão":3, "melancia":1}
+print(frutas.keys())
+frutausua=input("fruta: ")
+
+if frutausua in frutas.keys():
+  print(frutas.get(frutausua))
+else:
+  print("fruta não cadastrada!")
+
+
+
+frutas={"maçã":10, "abacate":15, "melão":(3,4), "melancia":1}
+print(frutas.values())
+print(frutas.items())
+
+frutas["laranja"] = 4
+print(frutas)
+
+frutas["melão"] = "banana"
+print(frutas)
+
+valor=frutas["melancia"]
+print(valor)

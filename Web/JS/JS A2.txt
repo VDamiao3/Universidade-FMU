@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <script>
+    //comentario em javascriot
+    /* comentario em bloco
+    Java script != de java
+    front end: html, css, javascript (dinâmico)
+    node.js -> front, back
+    arquivo javascript tem a extensão .js
+    interno <script> <'/'script>
+    externo <script src = ... 
+    inline evento chamador 
+    */
+
+    //comandos de exibição ou saída
+    alert("Olá Mundo!")
+    document.write("GG easy >:)")
+    console.log("hey baby!") //usa o inspecionar e vai para o console
+
+    //comandos de entrada
+    //prompt("digite seu nome:")
+
+    //let -> variável local / var -> variável global / const -> variável constante(o valor não pode ser mais alterado)
+
+    let nome = "<br>aula de js"
+    document.write(nome)
+    const pi = 3.141572
+    document.write("<br>"+pi)
+
+    let aluno = prompt("Digite seu nome: ")
+    let idade = prompt("Digite sua idade: ")
+    idade = Number(idade)
+    confirm('Sua idade é '+idade+', certo?')
+    alert(Seu nome é ${aluno})
+    </script>
+    
+
+</head>
+<body>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+#include <stdio.h>
+int QuantAlunos,idade,Media,Faixa1,Faixa2,Faixa3;
+int main()
+{
+    printf("Digite a quantidade de alunos ");
+    scanf("%d",&QuantAlunos);
+    for(int i=0;i<QuantAlunos; i++){
+        
+        printf("informe a idade do aluno ");
+        scanf("%d",&idade);
+        if(idade<=25 && idade>0)
+        {
+        Faixa1=Faixa1+1;    
+        }else if(idade>=26 && idade<=60)
+        {
+          Faixa2=Faixa2+1;  
+        }else if(idade>60)
+        {
+          Faixa3=Faixa3+1; 
+        }else{
+            printf("Erro");
+        }
+        
+    }
+      
+        if(Faixa1>Faixa2 && Faixa1>Faixa3)
+        {
+             printf("Turma Jovem");
+        }else if(Faixa2>Faixa3 && Faixa2>Faixa1){
+            printf("Turma Adulta");
+        }else if(Faixa3>Faixa2 && Faixa3>Faixa1){
+            printf("Turma Idosa");
+        }
+    
+    return 0;
+}

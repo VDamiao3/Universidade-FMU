@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="shortcut icon" href="favi.png" type="image/x-icon">
+</head>
+<body>
+    
+<h1 id="título">Calculadora</h1>
+<br>
+<h2 class="subtítulo">Valores digitados no formulário</h2>
+
+<div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maiores iste iusto totam! Beatae quas dolores doloribus delectus ad nam ea ex praesentium eveniet, corrupti blanditiis minima, rem odit nostrum!</p>
+</div>
+
+<script>
+    /*
+    DOM
+    d - document
+    o - object
+    m - model
+    O DOM representa uma árvore
+    */
+
+   //alterando o alinhamento e cor do id=título
+   document.getElementById('título').style.color = 'orange'
+   document.getElementById('título').style.textAlign = 'center'
+
+   //alterar elemento pelo nome da classe
+   document.getElementsByClassName('subtítulo').style.color = 'yellow' 
+</script>
+
+</body>
+</html>
